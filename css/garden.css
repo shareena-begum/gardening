@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: 'source sans pro', sans-serif ;
@@ -11,16 +15,21 @@ body {
 h1{
     font-size: 2.25rem;
     font-weight: 300;
+    color: #fff;
+    margin:0;
 }
  
 h1 + p {
     color: #0ea516;
     font-weight: 900;
     font-size: 1.3125rem;
+    text-transform: uppercase;
+    margin: 0;
 }
 
 h2{
     font-size: 1.312rem;
+    margin: 0;
 }
 
 h2 + p{
@@ -28,6 +37,7 @@ h2 + p{
     font-weight: 900;
     font-size: 1rem;
     text-transform: uppercase;
+    margin: 0;
 }
 
 .top-text{
@@ -35,6 +45,7 @@ h2 + p{
     font-size: 0.625rem;
     text-transform: uppercase;
     font-weight: 900;
+    order: -1;
 }
 
 .fine-print{
@@ -43,3 +54,63 @@ h2 + p{
 }
 
 strong { font-weight: 900;}
+
+/* ==== Intro Section ===== */
+
+.intro {
+    background-color: #404040;
+    background-image: url("images/plant.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 0 .5em 2em;
+}
+
+/* ==== main-content Section ===== */
+
+.main-content {
+    padding: 2em 1em;
+} 
+
+.container{
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.container-intro {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 50vh;
+}
+
+
+/* media queries */
+
+@media (min-width: 500px) {
+    body {
+        font-size: 1.125rem;
+        display:flex;
+    }
+
+    h1{
+        font-size: 3.5rem;
+    }
+
+    h2,
+    h1 + p {
+        font-size: 1.75rem;
+    }
+    
+    .intro,
+    .main-content{
+        width: 50%;
+        min-height: 100vh;
+    }
+
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
