@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    font-family: 'source sans pro', sans-serif ;
+    font-size: 1rem;
+    color: #404040;
+    text-align: center ;
+}
+
+/* ==== Typhography ==== */
+
+h1{
+    font-size: 2.25rem;
+    font-weight: 300;
+}
+ 
+h1 + p {
+    color: #0ea516;
+    font-weight: 900;
+    font-size: 1.3125rem;
+}
+
+h2{
+    font-size: 1.312rem;
+}
+
+h2 + p{
+    color:#0ea516;
+    font-weight: 900;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.top-text{
+    color: #0ea516;
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.fine-print{
+    font-size: 0.625rem;
+    letter-spacing: 1px;
+}
+
+strong { font-weight: 900;}
