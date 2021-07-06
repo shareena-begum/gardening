@@ -37,15 +37,19 @@ h2 + p{
     font-weight: 900;
     font-size: 1rem;
     text-transform: uppercase;
-    margin: 0;
+    margin-top: 0;
 }
 
 .top-text{
     color: #0ea516;
     font-size: 0.625rem;
+    margin: 0;
+    padding-top: 2px;
     text-transform: uppercase;
     font-weight: 900;
     order: -1;
+    border-top: 5px solid #0ea516;
+    border-image: linear-gradient(to left, #cbe54e, #94b447 ) 1;
 }
 
 .fine-print{
@@ -60,9 +64,14 @@ strong { font-weight: 900;}
 .intro {
     background-color: #404040;
     background-image: url("images/plant.jpg");
+    /* background-blend-mode: multiply;  this property is used to darkent the bg-image to read the text properly.*/
     background-size: cover;
     background-position: center;
     padding: 0 .5em 2em;
+    /* display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 50vh; */
 }
 
 /* ==== main-content Section ===== */
@@ -71,10 +80,18 @@ strong { font-weight: 900;}
     padding: 2em 1em;
 } 
 
-.container{
+.intro > *,
+.main-content > * {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* other form of writing by creating
+ classes in html .container{
     max-width: 400px;
     margin: 0 auto;
-}
+} */
 
 .container-intro {
     display:flex;
@@ -82,6 +99,62 @@ strong { font-weight: 900;}
     justify-content: space-between;
     min-height: 50vh;
 }
+
+
+
+/* form */
+
+.email-collecter {
+    width: 80%;
+    max-width: 300px;
+
+}
+
+input,
+.btn{
+    width: 100%;
+    border-radius: 5px;
+}
+
+input{
+    font-family: inherit;
+    text-align: inherit;
+    margin-bottom:.75em;
+    padding: .25em;
+    border: 1px solid #404040;
+    transform: scale(1);
+    transition: transform 250ms;
+}
+
+input:focus {
+    transform: scale(1.1);
+}
+
+.btn {
+    display: inline-block;
+    padding: .5em 1.5em;
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 1px;
+    border: 0;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: linear-gradient(to left, #cbe54e, #94b447);
+    color: #fff;
+    /* transition: color 1s; */
+    transform: scale(1);
+    transition: transform 250ms;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    color: black;
+    transform: scale(1.1);
+}
+
 
 
 /* media queries */
@@ -110,7 +183,6 @@ strong { font-weight: 900;}
     .main-content {
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: center;
     }
 }
