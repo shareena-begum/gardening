@@ -13,21 +13,45 @@
                 <p class="top-text">Planting as exercise</p>
             </div>
        </div>
-       <div class="main-content">
+       <div id="Main-Content" class="main-content">
            <div class="container">
                 <h2>Become a Gardener</h2>
                 <p>Register today</p>
                 <p>Know the technique of gardening, plant and flower care and
                     also professional mowing, trimming and prunning by signing up for a free Gardening training
                 </p>
-                <form class="email-collecter" action="#" method="POST">
-                    <input type="text" required placeholder="first name"> <br>
-                    <input type="email" required placeholder="email">
+                <form id="Email-Collector" class="email-collecter" action="#" method="POST">
+                    <input name="firstName" type="text" required placeholder="first name"> <br>
+                    <input name="emailAddress" type="email" required placeholder="email">
                     <button class="btn btn-primary" type="submit">Register</button>
                 </form>
                 <p class="fine-print">We will never share your information with your permission</p>
            </div>
        </div> 
+
+       <script>
+        let emailCollectorForm = document.getElementById("Email-Collector")
+        emailCollectorForm.addEventListener("submit", event => {
+            event.preventDefault()
+            // Do something with the event
+            console.log("The event is firing!")
+            
+            debugger
+            let ourFormData = new FormData(event.target)
+            
+            let userFirstName = ourFormData.get("firstName")
+            
+            let updatedHtmlContent = `
+                <h2>Congratulations, ${userFirstName}!</h2>
+
+                <p>You're on your way to become an excellent Gardener!</p>
+                
+                <p class="fine-print">We'll never share your information without your permission</p>
+            `
+            let ourMainContent = document.getElementById("Main-Content")
+            ourMainContent.innerHTML = updatedHtmlContent
+        })
+    </script>
 
     </body>
 </html>
